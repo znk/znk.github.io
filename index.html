@@ -3,43 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<style>
+	<style>
 * {
 	/* outline: 1px solid red !important; */
 	margin:0; border:0; padding:0;
+	filter: invert(0%);
 }
+
 #center {
+	width: 125px; height:105px;
 	position: absolute;
-	left: 50%; top: 50%;
+	left: 50%; top: 50%; zoom:400%;
 	transform: translate(-50%, -50%);
 }
-#wrapper {
-	width: 125px; height:105px;
-	zoom:400%;
-}
-.annoying { 
+
+@keyframes ninja { 50% { opacity: 0; } }
+
+.annoying-dog:before {
 	width: 5px; height: 5px; font-size: 5px;
-	position: absolute;
-}
-.dog-0 {
-	z-index: 0;
+	position: absolute;	z-index: 1; content: "";
 	animation: ninja .4s step-start 0s infinite;
 	box-shadow: 03em 01em 0 #000, 05em 01em 0 #000, 06em 01em 0 #000, 07em 01em 0 #000, 08em 01em 0 #000, 10em 01em 0 #000, 02em 02em 0 #000, 04em 02em 0 #000, 09em 02em 0 #000, 11em 02em 0 #000, 02em 03em 0 #000, 11em 03em 0 #000, 02em 04em 0 #000, 12em 04em 0 #000, 19em 04em 0 #000, 01em 05em 0 #000, 04em 05em 0 #000, 07em 05em 0 #000, 13em 05em 0 #000, 18em 05em 0 #000, 20em 05em 0 #000, 01em 06em 0 #000, 14em 06em 0 #000, 15em 06em 0 #000, 18em 06em 0 #000, 20em 06em 0 #000, 01em 07em 0 #000, 05em 07em 0 #000, 06em 07em 0 #000, 16em 07em 0 #000, 17em 07em 0 #000, 18em 07em 0 #000, 20em 07em 0 #000, 01em 08em 0 #000, 03em 08em 0 #000, 05em 08em 0 #000, 08em 08em 0 #000, 20em 08em 0 #000, 01em 09em 0 #000, 04em 09em 0 #000, 05em 09em 0 #000, 06em 09em 0 #000, 07em 09em 0 #000, 20em 09em 0 #000, 01em 10em 0 #000, 20em 10em 0 #000, 01em 11em 0 #000, 20em 11em 0 #000, 01em 12em 0 #000, 20em 12em 0 #000, 01em 13em 0 #000, 20em 13em 0 #000, 01em 14em 0 #000, 19em 14em 0 #000, 02em 15em 0 #000, 19em 15em 0 #000, 02em 16em 0 #000, 05em 16em 0 #000, 06em 16em 0 #000, 09em 16em 0 #000, 10em 16em 0 #000, 11em 16em 0 #000, 12em 16em 0 #000, 15em 16em 0 #000, 16em 16em 0 #000, 19em 16em 0 #000, 02em 17em 0 #000, 04em 17em 0 #000, 06em 17em 0 #000, 09em 17em 0 #000, 12em 17em 0 #000, 15em 17em 0 #000, 16em 17em 0 #000, 18em 17em 0 #000, 03em 18em 0 #000, 06em 18em 0 #000, 07em 19em 0 #000, 08em 18em 0 #000, 12em 18em 0 #000, 14em 18em 0 #000, 13em 19em 0 #000, 17em 18em 0 #000, 17em 18em 0 #000;
 }
-.dog-1 {
-	z-index: 1;
+.annoying-dog:after {
+	width: 5px; height: 5px; font-size: 5px;
+	position: absolute;	z-index: 1; content: "";
 	animation: ninja .4s step-end 0s infinite;
 	box-shadow: 03em 01em 0 #000, 05em 01em 0 #000, 06em 01em 0 #000, 07em 01em 0 #000, 08em 01em 0 #000, 10em 01em 0 #000, 02em 02em 0 #000, 04em 02em 0 #000, 09em 02em 0 #000, 11em 02em 0 #000, 02em 03em 0 #000, 11em 03em 0 #000, 02em 04em 0 #000, 12em 04em 0 #000, 01em 05em 0 #000, 04em 05em 0 #000, 07em 05em 0 #000, 13em 05em 0 #000, 01em 06em 0 #000, 14em 06em 0 #000, 15em 06em 0 #000, 01em 07em 0 #000, 05em 07em 0 #000, 06em 07em 0 #000, 16em 07em 0 #000, 17em 07em 0 #000, 18em 07em 0 #000, 19em 07em 0 #000, 20em 07em 0 #000, 21em 07em 0 #000, 22em 07em 0 #000, 01em 08em 0 #000, 03em 08em 0 #000, 05em 08em 0 #000, 08em 08em 0 #000, 23em 08em 0 #000, 01em 09em 0 #000, 04em 09em 0 #000, 05em 09em 0 #000, 06em 09em 0 #000, 07em 09em 0 #000, 20em 09em 0 #000, 21em 09em 0 #000, 22em 09em 0 #000, 01em 10em 0 #000, 20em 10em 0 #000, 01em 11em 0 #000, 20em 11em 0 #000, 01em 12em 0 #000, 20em 12em 0 #000, 01em 13em 0 #000, 20em 13em 0 #000, 01em 14em 0 #000, 19em 14em 0 #000, 02em 15em 0 #000, 19em 15em 0 #000, 02em 16em 0 #000, 05em 16em 0 #000, 06em 16em 0 #000, 09em 16em 0 #000, 10em 16em 0 #000, 11em 16em 0 #000, 12em 16em 0 #000, 15em 16em 0 #000, 16em 16em 0 #000, 19em 16em 0 #000, 02em 17em 0 #000, 05em 17em 0 #000, 06em 17em 0 #000, 08em 17em 0 #000, 12em 17em 0 #000, 14em 17em 0 #000, 16em 17em 0 #000, 18em 17em 0 #000, 19em 17em 0 #000, 02em 18em 0 #000, 04em 18em 0 #000, 07em 18em 0 #000, 13em 18em 0 #000, 16em 18em 0 #000, 18em 18em 0 #000, 03em 19em 0 #000, 17em 19em 0 #000;
 }
-@keyframes ninja { 50% { opacity: 0.0; } }
-</style>
+
+	</style>
 </head>
+
 <body>
+
 <div id="center">
-	<div id="wrapper">
-		<div class="annoying dog-0"></div>
-		<div class="annoying dog-1"></div>
-	</div>
+	<div class="annoying-dog"></div>
 </div>
+
 </body>
+
 </html>
